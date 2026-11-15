@@ -75,6 +75,7 @@ ul { list-style: none; }
 
 /* Home */
 .home {
+  zoom: var(--scale, 1);
   flex: 1;
   display: flex;
   justify-content: center;
@@ -153,24 +154,11 @@ ul { list-style: none; }
 .cover__tagline { width: 36%; margin-top: 24px; font-size: 13px; line-height: 1.2; }
 
 .mockup {
-  position: relative;
+  display: block;
   width: 170px;
-  height: 140px;
-  margin-top: 60px;
-  background: linear-gradient(160deg, #4a4036, #1d1915);
+  height: auto;
+  margin-top: 4px;
 }
-.phone {
-  position: absolute;
-  width: 58px;
-  height: 122px;
-  border: 2px solid #2a2a2a;
-  border-radius: 9px;
-  background: linear-gradient(180deg, #f6f6f6, #d4d4d4);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
-}
-.phone--1 { left: -4px; top: -60px; }
-.phone--2 { left: 52px; top: -38px; background: linear-gradient(180deg, #eef2f5, #bccad5); }
-.phone--3 { right: -14px; top: -30px; background: linear-gradient(180deg, #1e1e26, #3c3c4c); }
 
 .cover__title { margin-top: auto; line-height: .8; font-weight: 700; }
 .cover__port {
