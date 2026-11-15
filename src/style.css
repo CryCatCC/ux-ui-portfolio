@@ -1,0 +1,126 @@
+:root {
+  --bg: #0f0f0f;
+  --paper: #ede9e0;
+  --text: #f4f1ea;
+  --flower: #b8294f;
+  --recipes: #1b3a5c;
+  --map: #2b2b2b;
+  --contact: #d9d5cc;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e5e5e5;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+}
+
+.tabs {
+  display: flex;
+  width: min(100%, 420px);
+  gap: 2px;
+}
+.tab {
+  flex: 1;
+  padding: 8px 6px;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+.tab--flower { background: var(--flower); }
+.tab--recipes { background: var(--recipes); }
+.tab--map { background: var(--map); }
+.tab--contact { background: var(--contact); color: #222; flex: .7; }
+
+.cover {
+  width: min(100%, 420px);
+  min-height: 640px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
+}
+.cover__top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+.cover__hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 28px;
+}
+.cover__tagline {
+  width: 40%;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 36px;
+}
+
+.mockup {
+  position: relative;
+  width: 56%;
+  aspect-ratio: 156 / 187;
+  background: linear-gradient(160deg, #3a322a, #1c1814);
+}
+.phone {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 9 / 19;
+  border-radius: 12px;
+  border: 3px solid #2a2a2a;
+  background: linear-gradient(180deg, #f2f2f2, #cfcfcf);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+}
+.phone--1 { left: -8%; top: -4%; }
+.phone--2 { left: 30%; top: 14%; background: linear-gradient(180deg, #e9eef2, #b9c8d4); }
+.phone--3 { right: -6%; top: 22%; background: linear-gradient(180deg, #1c1c24, #3a3a4a); }
+
+.cover__title {
+  margin-top: auto;
+  line-height: .85;
+  font-weight: 800;
+}
+.cover__port {
+  display: block;
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(88px, 26vw, 112px);
+  color: var(--paper);
+  letter-spacing: -.02em;
+}
+.cover__folio {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(72px, 21vw, 90px);
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--paper);
+}
+
+.cover__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(244, 241, 234, .35);
+}
+.cover__name { font-size: 13px; font-weight: 600; letter-spacing: .08em; }
+.cover__sub { margin-top: 6px; font-size: 9px; letter-spacing: .12em; opacity: .75; }
+.cover__year {
+  font-family: "Archivo", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--paper);
+}
