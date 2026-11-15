@@ -41,7 +41,8 @@ ul { list-style: none; }
 
 /* Header: logo x65, button x1052–1152 y26–60 */
 .header {
-  position: absolute;
+  zoom: var(--scale, 1);
+  position: fixed;
   top: 26px;
   left: 65px;
   right: 66px;
@@ -72,9 +73,12 @@ ul { list-style: none; }
 
 /* Socials: x19, 34px circles, 14px gap, centred on y357 */
 .socials {
-  position: absolute;
+  zoom: var(--scale, 1);
+  position: fixed;
   left: 19px;
-  top: 293px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -22px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -226,7 +230,8 @@ ul { list-style: none; }
 
 /* Footer: text centred on y724 */
 .footer {
-  position: absolute;
+  zoom: var(--scale, 1);
+  position: fixed;
   left: 65px;
   right: 66px;
   bottom: 27px;
